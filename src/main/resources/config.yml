@@ -1,0 +1,59 @@
+# MyAntiCheat Configuration
+
+# Notification settings
+notifications:
+  # Send detection messages in-game to players with the 'myanticheat.notify' permission
+  chat:
+    enabled: true
+    # Format of the notification message
+    # Placeholders: %player%, %check%, %vl%
+    format: "&8[&cAC&8] &f%player% &7failed &c%check% &7(VL: &f%vl%&7)"
+
+# The command to execute when a player exceeds the threshold for a check
+# %player% will be replaced with the player's name
+punishment-command: "kick %player% [AntiCheat] Unfair Advantage"
+
+# Individual checks configuration
+checks:
+  # NoFall check - detects when players avoid fall damage
+  nofall:
+    # Enable or disable this check
+    enabled: true
+    # Number of violations before punishment
+    threshold: 10
+    # Description for reference
+    description: "Detects when players avoid fall damage illegitimately"
+  
+  # Speed check - detects when players move too fast
+  speed:
+    # Enable or disable this check
+    enabled: true
+    # Number of violations before punishment
+    threshold: 15
+    # Description for reference
+    description: "Detects when players move faster than normally possible"
+
+  # Fly check - detects suspicious vertical movement / hovering
+  fly:
+    # Enable or disable this check
+    enabled: true
+    # Number of violations before punishment
+    threshold: 20
+    # Description for reference
+    description: "Detects suspicious vertical movement or hovering"
+
+  # Jesus (WaterWalk) check - detects walking on water
+  jesus:
+    # Enable or disable this check
+    enabled: true
+    # Number of violations before punishment
+    threshold: 10
+    # Description for reference
+    description: "Detects players walking on water without legitimate means"
+
+# Debug settings (for developers)
+debug:
+  # Enable console logging of all check failures/violations
+  log-violations: true
+  # Enable verbose logging with extra information
+  verbose: false 

@@ -1,0 +1,22 @@
+name: MyAntiCheat
+version: 0.1
+main: com.example.myanticheat.MyAntiCheat
+api-version: '1.21'
+description: A simple and extendable Minecraft anti-cheat plugin
+author: YourName
+
+commands:
+  myanticheat:
+    description: Main command for MyAntiCheat plugin
+    usage: /myanticheat [reload]
+    aliases: [mac]
+    permission: myanticheat.admin
+
+permissions:
+  myanticheat.admin:
+    description: Allows access to admin commands
+    default: op
+
+  myanticheat.notify:
+    description: Receives in-game notifications for cheat detections
+    default: op 
